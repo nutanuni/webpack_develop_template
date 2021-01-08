@@ -1,0 +1,24 @@
+{
+  "name": "webpack_develop_template",
+  "version": "1.0.0",
+  "description": "webpackを使用したテンプレート開発環境です",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --config webpack.config.js",
+    "build:watch": "webpack --watch --config webpack.config.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.11.6",
+    "@babel/preset-env": "^7.11.5",
+    "babel-loader": "^8.1.0",
+    "css-loader": "^4.3.0",
+    "eslint": "^7.10.0",
+    "node-sass": "^4.14.1",
+    "sass-loader": "^10.0.2",
+    "style-loader": "^1.2.1",
+    "webpack": "^4.44.2",
+    "webpack-cli": "^3.3.12"
+  }
+}
