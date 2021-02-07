@@ -1,6 +1,6 @@
 # webpack開発テンプレート
-webpackで開発を行うためのテンプレートです。  
-このテンプレートでは、以下の機能を使用することができます。
+webpackで開発を行うためのテンプレート  
+### [ 機能 ]
 * ES2015以降の構文をトランスパイル  
 babel, @babel/core, @babel/preset-env  
 @babel/preset-envについて : https://babeljs.io/docs/en/babel-preset-env
@@ -13,14 +13,19 @@ sass-loader : sassコードをコンパイルし標準CSSに変換
 devDependencies
 * webpack
 * webpack-cli  
-#### ※以下Babelを利用しない場合不要
+#### babelを利用する場合
 * @babel/core
 * @babel/preset-env
 * babel-loader
-#### ※以下スタイルシートをバンドルしない場合不要
+#### スタイルシートをバンドルする場合
 * css-loader
 * style-loader
-* sass-lodaer（sassを利用する場合、node-sassが必要）
+* sass-loader（sassを利用する場合、node-sassが必要）
+#### stylelintを利用する場合
+* stylelint
+* stylelint-scss
+* stylelint-config-recommended-scss
+* stylelint-config-recess-order (--fixでプロパティの順番をソート)
 
 ## Installation
 package.jsonが存在するディレクトリで以下のコマンドを実行する。
@@ -30,16 +35,23 @@ npm install
 これでpackage.jsonにある、dependencies/devDependenciesに記載されているパッケージがすべてインストールされる。
 
 ## Usage
-webpack.config.jsの設定に従い、ビルドする。
+#### webpack.config.jsの設定に従い、ビルドする。
 ```
 npm run build
 ```
-webpack.config.jsの設定に従い、再ビルドする。  
+#### webpack.config.jsの設定に従い、再ビルドする。  
 エントリーポイント(src/index.js)の依存関係ファイルを監視して差分ビルドされる。
 ```
 npm run build:watch
 ```
-
+#### stylelintによるcss/scss/sassコードチェック
+```
+npm run lint:css
+```
+#### stylelintによるcss/scss/sassコードチェック + 自動修正
+```
+npm run lint:fix
+```
 ## Note
 ### webpack
 * CLI option  

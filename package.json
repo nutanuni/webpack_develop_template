@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack --config webpack.config.js",
-    "build:watch": "webpack --watch --config webpack.config.js"
+    "build:watch": "webpack --watch --config webpack.config.js",
+    "lint:css": "stylelint **/*.{css,scss,sass}",
+    "lint:fix": "stylelint --fix **/*.{css,scss,sass}"
   },
   "author": "",
   "license": "ISC",
@@ -18,6 +20,10 @@
     "node-sass": "^4.14.1",
     "sass-loader": "^10.0.2",
     "style-loader": "^1.2.1",
+    "stylelint": "^13.9.0",
+    "stylelint-config-recess-order": "^2.3.0",
+    "stylelint-config-recommended-scss": "^4.2.0",
+    "stylelint-scss": "^3.18.0",
     "webpack": "^4.44.2",
     "webpack-cli": "^3.3.12"
   }
