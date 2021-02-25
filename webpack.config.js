@@ -1,3 +1,5 @@
+// const StyleLintWebpackPlugin = require('stylelint-webpack-plugin');
+
 // 設定ファイルの外枠
 module.exports = {
   // モード
@@ -64,5 +66,13 @@ module.exports = {
       }
 
     ]
-  }
+  },
+  // プラグインに関する設定
+  plugins: [
+    // stylelint によるコード修正 + プロパティ自動ソート
+    // new StyleLintWebpackPlugin({
+    //   configFile: './.stylelintrc.json',
+    //   fix: true
+    // })
+  ]
 };
