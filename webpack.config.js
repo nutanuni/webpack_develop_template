@@ -26,12 +26,21 @@ module.exports = {
 
       ////////// css バンドル用
       // {
-      //   test: /.css$/,
+      //   test: /\.css$/,
       //   use: [
       //     // css-loaderで.cssファイルをモジュール化した後、style-loaderでページに組み込まれる
       //     'style-loader',
+      //     'css-loader'
+      //   ]
+      // },
+
+      ////////// scss バンドル用
+      // {
+      //   test: /\.scss$/,
+      //   use: [
+      //     'style-loader',
       //     'css-loader',
-      //     // 'sass-loader' // Sassを使用する場合
+      //     'sass-loader'
       //   ]
       // },
 
