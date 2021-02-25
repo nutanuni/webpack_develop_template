@@ -35,14 +35,18 @@ npm install
 これでpackage.jsonにある、dependencies/devDependenciesに記載されているパッケージがすべてインストールされる。
 
 ## Usage
-#### webpack.config.jsの設定に従い、ビルドする。
+#### webpack.dev.jsの設定に従い、ビルドする。（開発用）
 ```
 npm run build
 ```
-#### webpack.config.jsの設定に従い、再ビルドする。  
+#### webpack.dev.jsの設定に従い、再ビルドする。（開発用）
 エントリーポイント(src/index.js)の依存関係ファイルを監視して差分ビルドされる。
 ```
 npm run build:watch
+```
+#### webpack.prod.jsの設定に従い、ビルドする。（本番用）
+```
+npm run prod
 ```
 #### stylelintによるcss/scss/sassコードチェック
 ```

@@ -1,16 +1,11 @@
 // const StyleLintWebpackPlugin = require('stylelint-webpack-plugin');
 
-// 設定ファイルの外枠
 module.exports = {
-  // モード
-  mode: 'development',
-  // ソースマップの設定、生成方法の制御
-  devtool: 'eval-source-map',
   // エントリーポイント
   entry: './src/index.js',
   // 出力設定
   output: {
-    // 出力先フォルダー
+    // 出力先フォルダ
     path: `${__dirname}/dist`,
     // 出力先のファイル名
     filename: 'main.js'

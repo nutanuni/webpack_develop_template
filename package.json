@@ -4,8 +4,9 @@
   "description": "webpackを使用したテンプレート開発環境です",
   "main": "index.js",
   "scripts": {
-    "build": "webpack --config webpack.config.js",
-    "build:watch": "webpack --watch --config webpack.config.js",
+    "build": "webpack --config webpack.dev.js",
+    "build:watch": "webpack --watch --config webpack.dev.js",
+    "prod": "webpack --config webpack.prod.js",
     "lint:css": "stylelint **/*.{css,scss,sass}",
     "lint:fix": "stylelint --fix **/*.{css,scss,sass}"
   },
@@ -26,6 +27,7 @@
     "stylelint-scss": "^3.19.0",
     "stylelint-webpack-plugin": "^2.1.1",
     "webpack": "^5.23.0",
-    "webpack-cli": "^4.5.0"
+    "webpack-cli": "^4.5.0",
+    "webpack-merge": "^5.7.3"
   }
 }
