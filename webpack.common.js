@@ -51,7 +51,14 @@ module.exports = {
               presets: [
                 [
                   '@babel/preset-env',
-                  { 'modules': false }
+                  {
+                    targets: {
+                      ie: '11'
+                    },
+                    'modules': false,
+                    useBuiltIns: 'usage', // polyfillのimport
+                    corejs: 3 // polyfill本体のバージョン指定(core-jsがpolyfill本体？)
+                  }
                 ]
               ]
             }
@@ -69,5 +76,7 @@ module.exports = {
     //   configFile: './.stylelintrc.json',
     //   fix: true
     // })
-  ]
+  ],
+  // webpack v5 から以下の記述が必要
+  target: ['web', 'es5'] // es5対応
 };
