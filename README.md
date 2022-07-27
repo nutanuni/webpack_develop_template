@@ -20,7 +20,9 @@ devDependencies
 #### スタイルシートをバンドルする場合
 * css-loader
 * style-loader
-* sass-loader（sassを利用する場合、node-sassが必要）
+* sass-loader（sassを利用する場合のみ。node-sassが必要。）  
+  * node-sassはnodeのバージョンに依存するため注意  
+  https://github.com/sass/node-sass
 #### stylelintを利用する場合
 * stylelint
 * stylelint-scss
@@ -96,6 +98,14 @@ npm run lint:fix
   test : /正規表現/ のように正規表現リテラルで書くのがベター。  
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;クォーテーションで囲んで文字列に指定するには絶対パスで書かないといけない。  
   use  : ローダーの指定
+
+### package.json の enginesプロパティについて
+本パッケージを利用するときのnodeのバージョンを明記できる。  
+`npm install`時にnodeバージョンの警告を起こすには、`--engine-strict`オプションが必要となる。  
+.npmrcに以下の設定をしておくとオプションは必要ない。
+```
+engine-strict=true
+```
 
 ## Author
 Kohei Sato
